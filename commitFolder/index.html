@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commit</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Commit</h1>
+    <p>
+        A commit in git is an object that contains a reference to:
+    </p>
+    <ul>
+        <li>a picture of the state (snapshot) recorded earlier in the index</li>
+        <li>Author's metadata</li>
+        <li>comments</li>
+        <li>zero or more pointers to other commits that are the direct parents of this commit</li>
+    </ul>
+    <p>
+        Depending on the situation, the commit may have the following number of parents:
+    </p>
+    <ul>
+        <li>0 for the first commit</li>
+        <li>1 for a regular commit</li>
+        <li>several for a commit obtained by merging two or more branches.</li>
+    </ul>
+    <h3 style="text-align: center;">Creating a commit</h3>
+    <p>
+        By running git commit, Git creates a commit. Git calculates the checksum for each subdirectory and stores these tree objects in the Git repository. Git then creates an object for a commit that has metadata and a pointer to the tree object. Thus, Git will be able to reproduce the current state when needed.
+    </p>
+    <h3 style="text-align: center;">File Status</h3>
+    <p>
+        Before saving any Git file, it counts the checksum, and it becomes an index of this file. Therefore, it is impossible to make a change to a file or folder so that Git does not notice this. All files can be in one of three states: fixed, changed, prepared. Recorded means that the file is already saved in your local database. Changed - files that have changed, but not yet fixed. Prepared - all changed files marked to be included in the next commit.
+    </p>
+</body>
+</html>
